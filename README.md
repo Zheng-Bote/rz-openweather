@@ -90,15 +90,15 @@ used folder structure
 
 ## Screenshots
 
-**_ loaded weather data _**
+**loaded weather data**
 
   <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_data.png" width="100%" height="auto" />
 
-**_ no cookie with API-Key _**
+**no cookie with API-Key**
 
   <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_cookie.png" width="100%" height="auto" />
 
-**_ search masq _**
+**search masq**
 
   <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_data.png" width="100%" height="auto" />
 
