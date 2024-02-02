@@ -2,7 +2,7 @@
 
 # rz-openweather
 
-A Web Component for Weather & environment data
+A VUE3 Web Component for Weather & environment data
 
 Shows the weather and environemnt data from given loaction
 
