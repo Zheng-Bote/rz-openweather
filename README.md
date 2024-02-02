@@ -92,15 +92,15 @@ used folder structure
 
 **_ loaded weather data _**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/assets/img/Screenshot_data.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_data.png" width="100%" height="auto" />
 
 **_ no cookie with API-Key _**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/assets/img/Screenshot_no_cookie.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_cookie.png" width="100%" height="auto" />
 
 **_ search masq _**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/assets/img/Screenshot_no_data.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_data.png" width="100%" height="auto" />
 
 ## Used By
 
