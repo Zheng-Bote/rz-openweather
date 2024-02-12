@@ -1,7 +1,7 @@
 <template>
   <div class="weather">
-    <header>
-      <h4>Weather & environmental data</h4>
+    <header v-if="with_title === 'yes'">
+      <h4>{{ title }}</h4>
     </header>
     <span v-if="ERROR">
       <div class="error">{{ ERROR_MSG }}</div>
@@ -67,18 +67,15 @@
 //const OPENWEATHER_API = import.meta.env.VITE_OPENWEATHER_API
 //const WEATHER_API = import.meta.env.VITE_WEATHER_API
 
-import { useCookies } from 'vue3-cookies'
-
 export default {
-  name: 'rz-openweather',
+  name: 'rz-weather',
   props: {
-    location: { type: String, default: '', required: false }
+    location: { type: String, default: '', required: false },
+    title: { type: String, default: 'WEATHER & ENVIRONMENTAL DATA', required: false },
+    with_title: { type: String, default: 'yes', required: false }
   },
 
-  setup() {
-    const { cookies } = useCookies()
-    return { cookies }
-  },
+  setup() {},
 
   data() {
     return {
@@ -109,17 +106,19 @@ export default {
   },
 
   mounted() {
-    if (this.cookies.isKey('rz-openweather')) {
-      this.WEATHER_API = this.cookies.get('rz-openweather')
+    // window.localStorage.getItem('rz-openweather');
+
+    if (window.localStorage.getItem('rz-weather') !== null) {
+      this.WEATHER_API = window.localStorage.getItem('rz-weather') || ''
     } else {
-      this.ERROR_MSG = 'No rz-openweather cookie found'
+      this.ERROR_MSG = 'No rz-weather API key found'
       this.ERROR = true
       console.error(this.ERROR_MSG)
       return
     }
 
     if (this.WEATHER_API.length === 0) {
-      this.ERROR_MSG = 'No rz-openweather cookie found'
+      this.ERROR_MSG = 'No rz-weather API key found'
       this.ERROR = true
       console.error(this.ERROR_MSG)
       return
@@ -150,62 +149,5 @@ export default {
 </script>
 
 <style scoped>
-.weather {
-  width: 300px;
-  background: oklch(85.62% 0.049 219.65);
-  border-radius: 5px;
-}
-h4 {
-  color: oklch(0% 0 0 / 50%);
-  text-transform: uppercase;
-}
-
-form {
-  padding: 5px;
-
-  text-align: center;
-}
-label {
-  color: oklch(0% 0 0 / 50%);
-  font-size: 0.8rem;
-}
-
-header {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  background: oklch(70.39% 0.15784181937770936 160.5538204217586);
-  border-radius: 5px 5px 0 0;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-}
-.grid-container {
-  min-width: 250px;
-  max-width: 100%;
-
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat(100px);
-}
-
-.grid-container > div {
-  border-bottom: 1px solid oklch(100% 0 0 / 50%);
-  padding: 5px;
-  font-size: 0.8rem;
-  color: black;
-}
-
-.grid-container > div:nth-last-child(-n + 2) {
-  border-bottom: none;
-}
-.col2 {
-  text-align: right;
-}
-.error {
-  color: red;
-  text-align: center;
-}
+@import url('../assets/custom.css');
 </style>

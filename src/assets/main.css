@@ -18,6 +18,7 @@
   body {
     display: flex;
     place-items: center;
+    /*background: lightgreen;*/
   }
 
   #app {

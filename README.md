@@ -1,6 +1,6 @@
 <div id="top" align="center">
 
-# rz-openweather
+# rz-weather
 
 A VUE3 Web Component for Weather & environment data
 
@@ -14,7 +14,7 @@ Shows the weather and environemnt data from given loaction
 
 ## Version
 
-v0.1.0
+v0.1.1
 
 ## License
 
@@ -25,25 +25,27 @@ v0.1.0
 #### Parameters
 
 ```
-    <rz-openweather></rz-openweather>
+    <rz-weather></rz-weather>
 ```
 
 ```
-    <rz-openweather location="Munich"></rz-openweather>
+    <rz-weather location="Munich" title="the Weather" with_title="no"></rz-weather>
 ```
 
-| Parameter  | Type     | Description          |
-| :--------- | :------- | :------------------- |
-| `location` | `string` | **Optional**. "city" |
+| Parameter    | Type     | Description                 |
+| :----------- | :------- | :-------------------------- |
+| `location`   | `string` | **Optional**. "city"        |
+| `title`      | `string` | **Optional**. "the Weather" |
+| `with_title` | `string` | **Optional**. "yes" or "no" |
 
 ## Installation
 
-**_ cookie _**
+**cookie**
 
-needs a cookie with API key from https://www.weatherapi.com/
+needs a loaclStorage key-val with API key from https://www.weatherapi.com/
 
 ```
-rz-openweather=<YOUR_API-KEY>
+rz-weather=<YOUR_API-KEY>
 ```
 
 used folder structure
@@ -51,8 +53,9 @@ used folder structure
 ```bash
 .
 ├── assets
-│   ├── index-4U__hwAE.css
-│   └── index-hA-240YH.js
+│   ├── custom.css
+│   ├── rz-weather.css
+│   └── rz-weather.js
 ├── favicon.ico
 └── index.html
 
@@ -71,7 +74,7 @@ used folder structure
     <title>Web Component</title>
 
     <meta name="description" content="Web Component for HTML footer" />
-    <meta name="version" content="v0.1.0" />
+    <meta name="version" content="v0.1.1" />
     <meta name="author" content="ZHENG Robert" />
     <meta name="date" content="2016-01-02T01:30:00+01:00" />
 
@@ -92,15 +95,15 @@ used folder structure
 
 **loaded weather data**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_data.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-weather/main/src/assets/img/Screenshot_data.png" width="100%" height="auto" />
 
-**no cookie with API-Key**
+**no localStorage with API-Key**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_cookie.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-weather/main/src/assets/img/Screenshot_no_cookie.png" width="100%" height="auto" />
 
 **search masq**
 
-  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-openweather/main/src/assets/img/Screenshot_no_data.png" width="100%" height="auto" />
+  <img src="https://raw.githubusercontent.com/Zheng-Bote/rz-weather/main/src/assets/img/Screenshot_no_data.png" width="100%" height="auto" />
 
 ## Used By
 

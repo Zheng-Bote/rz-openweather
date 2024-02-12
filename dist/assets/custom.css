@@ -1,0 +1,61 @@
+.weather {
+  width: 300px;
+  /*background: oklch(85.62% 0.049 219.65);*/
+  background: rgba(0, 0, 0, 0);
+
+  border: 1px solid oklch(100% 0 0 / 50%);
+  border-radius: 5px;
+}
+h4 {
+  color: oklch(0% 0 0 / 50%);
+  text-transform: uppercase;
+}
+
+form {
+  padding: 5px;
+
+  text-align: center;
+}
+label {
+  color: oklch(0% 0 0 / 50%);
+  font-size: 0.8rem;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /*background: oklch(70.39% 0.15784181937770936 160.5538204217586);*/
+  border-radius: 5px 5px 0 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
+.grid-container {
+  min-width: 250px;
+  max-width: 100%;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(100px);
+}
+
+.grid-container > div {
+  border-bottom: 1px solid oklch(100% 0 0 / 50%);
+  padding: 5px;
+  font-size: 0.8rem;
+  color: black;
+}
+
+.grid-container > div:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+.col2 {
+  text-align: right;
+}
+.error {
+  color: red;
+  text-align: center;
+}
